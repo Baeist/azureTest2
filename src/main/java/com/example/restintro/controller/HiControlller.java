@@ -41,7 +41,7 @@ public class HiControlller {
 
         UserEntity UE = new UserEntity(newUser);
         userService.save(UE);
-        System.out.println("testing one time");
+
         return new ResponseEntity<>(UE, HttpStatus.OK);
     }
     @PostMapping("/addUser")
