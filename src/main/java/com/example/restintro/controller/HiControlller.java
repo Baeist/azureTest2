@@ -40,6 +40,7 @@ public class HiControlller {
     public ResponseEntity<UserEntity> addUser(@PathVariable("new_user") String newUser){
 
         UserEntity UE = new UserEntity(newUser);
+        userService.save(UE);
 
         return new ResponseEntity<>(UE, HttpStatus.OK);
     }
