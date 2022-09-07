@@ -35,6 +35,7 @@ public class UserService implements InterfaceUserService {
     @Override
     public void delete(UserEntity object) {
 
+        repo.delete(object);
     }
 
     @Override

@@ -54,6 +54,15 @@ public class HiControlller {
         return new ResponseEntity<>(UE, HttpStatus.OK);
     }
 
+    @GetMapping("/delete/{user}")
+    public ResponseEntity<Set<UserEntity>> deleteUserSecond(@PathVariable("user") String user){
+
+        UserEntity UE = new UserEntity(user);
+        userService.delete(UE);
+
+        return new ResponseEntity<>(userService.findAll(), HttpStatus.OK);
+    }
+
     @GetMapping("/showAll")
     public ResponseEntity<Set<UserEntity>> showAllUsers(){
 
