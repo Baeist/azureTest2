@@ -33,14 +33,14 @@ public class UserService implements InterfaceUserService {
     }
 
     @Override
-    public void delete(UserEntity object) {
+    public void delete(UserEntity user) {
 
-        repo.delete(object);
+        repo.delete(user);
     }
 
     @Override
     public void deleteById(Long aLong) {
-
+        repo.deleteById(aLong);
     }
 
     @Override
