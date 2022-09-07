@@ -54,7 +54,7 @@ public class HiControlller {
         return new ResponseEntity<>(UE, HttpStatus.OK);
     }
 
-    @GetMapping("/delete/{user}")
+    @PostMapping("/delete/{user}")
     public ResponseEntity<Set<UserEntity>> deleteUserSecond(@PathVariable("user") String user){
 
         UserEntity UE = new UserEntity(user);
